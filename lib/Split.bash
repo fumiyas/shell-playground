@@ -4,6 +4,10 @@
 ##
 ## License: GNU General Public License version 3
 ##
+## Inspired by:
+##   * bashでsplitを書いてみた
+##     * http://d.hatena.ne.jp/hirose31/20141022/1413972957
+##
 
 SplitFast() {
   local dst="$1"
@@ -11,7 +15,7 @@ SplitFast() {
   local src="${3-:}"
 
   [[ $dst =~ [_a-zA-Z][_a-zA-Z0-9]* ]] || {
-    echo "ERROR: split_fast(): Invalid destination variable name: $dst" 1>&1
+    echo "ERROR: SplitFast(): Invalid destination variable name: $dst" 1>&1
     return 1
   }
 
@@ -117,5 +121,8 @@ function test_split {
 
 if [[ ${0##*/} == Split.bash ]]; then
   test_split
+  exit $?
 fi
  
+return 0
+
