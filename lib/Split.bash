@@ -1,4 +1,9 @@
 #!/bin/bash
+##
+## Copyright (c) 2014 SATOH Fumiyasu @ OSS Technology Corp., Japan
+##
+## License: GNU General Public License version 3
+##
 
 SplitFast() {
   local dst="$1"
