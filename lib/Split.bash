@@ -67,7 +67,7 @@ Split() {
   return 0
 }
 
-function test_split {
+function test_Split {
   set -u
   set -e
 
